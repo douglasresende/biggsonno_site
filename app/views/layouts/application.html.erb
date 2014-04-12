@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bigg Sonno - Colchões Magnéticos</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div align="center">
+    <div id="topo">
+      <div class="contt">
+        <div id="logo">
+          <a href="home">
+            <img src="/assets/BiggSonno.png" />
+          </a>
+        </div>
+        <div id="topo_r" align="right">
+          <div id="topo_r_tel">
+            <img src="/assets/telefone.png" />
+          </div>
+          <div id="menu">
+            <ul>
+              <li><a href="empresa"> A Empresa </a></li>
+              <li><a href="produtos"> Produtos </a></li>
+              <li><a href="seja-um-revendedor"> Seja um revendedor </a></li>
+              <li><a href="contato"> Contato </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="cb"></div>
+      </div>
+    </div>
+    
+    <div id="conteudo">
+      <%= yield %>
+    </div>
+    
+    <div id="rodape">
+      <div class="contt">
+        <div id="rdp_l" align="left">
+          <div class="rdp_tlt"> CONTATO </div>
+          <div class="rdp_tlt_txt" style="padding-bottom:20px; font-size:18px;"> (62) 3253-1388 </div>
+          <div class="rdp_tlt_txt"> Rua C-27, Quadra 14, Lote 05 </div>
+          <div class="rdp_tlt_txt"> Jardim América </div>
+          <div class="rdp_tlt_txt"> CEP.: 74.265-170, Goiânia - GO </div>
+        </div>
+
+        <div class="rdp_div"></div>
+
+        <div id="rdp_c" align="left">
+          <div class="rdp_tlt"> NEWSLETTER </div>
+          <div class="rdp_txt_news"> Cadastre-se e receba nossos informativos </div>
+          <div><input type="text" id="nomeNews" class="inp_news" placeholder="Nome" /></div>
+          <div><input type="text" id="emailNews" class="inp_news2" placeholder="E-mail" /></div>
+          <div align="right"><a id="addNews" href="javascript:;" class="btn">OK</a></div>
+        </div>
+
+        <div class="rdp_div"></div>
+
+        <div id="rdp_r" align="left">
+          <div class="rdp_tlt"> REDES SOCIAIS </div>
+          <a class="rdp_r_img" href=""> <img src="/assets/facebook.png" /> </a>
+          <a class="rdp_r_img" href=""> <img src="/assets/twitter.png" /> </a>
+        </div>
+        <div class="cb"></div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
