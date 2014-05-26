@@ -1,39 +1,71 @@
-<div id="banner_out">
-  <div id="banner" class="nivoSlider" style="position: relative; background-image: url(/assets/banner.jpg); background-position: initial initial; background-repeat: no-repeat no-repeat;"></div>
-</div>
-
 <div class="contt">
-  <div class="pcp_top_bx" align="left">
-    <p class="pcp_top_bx_tlt"> Produtos </p>
-    <div class="pcp_top_bx_img">
-      <a href="produtos">
-        <img src="assets/pcp1.png">
-      </a>
-    </div>
-    <p class="pcp_top_bx_txt"> Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
-    <a href="produtos" class="pcp_bt_mais"></a>
-  </div>
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="row-fluid">
+        <div class="span4 table-bordered product-item">
+          <strong>Colchão Bigg Sonno Fisioquântico</strong>
+          <img src="assets/biggsonno.jpg">
+          Com:
+          <div class="bs-docs-example">
+            <ul>
+              <li>10 Anos de garantia no colchão</li>
+              <li>Vibroterapia (Massagem)</li>
+              <li>Terapia Quântica</li>
+              <li>Photonterapia (Infravermelho Longo)</li>
+              <li>Magnétoterapia (Ímãs)</li>
+            </ul>
+          </div>
+        </div>
+        <div class="span4 table-bordered product-item">
+          <strong>Colchão Bigg Sonno Prime</strong>
+          <img src="assets/biggsonno_prime.jpg">
+          Com:
+          <div class="bs-docs-example">
+            <ul>
+              <li>10 anos de garantia no colchão</li>
+              <li>Photonterapia (Infravermelho Longo)</li>
+              <li>Magnétoterapia (Ímãs)</li>
+              <li>&nbsp;</li>
+              <li>&nbsp;</li>
+            </ul>
+          </div>
+        </div>
+        <div class="span4 table-bordered product-item">
+          <strong>Colchão Bigg Sonno Imag Plus</strong>
+          <img src="assets/biggsonno_imag.jpg">
+          Com:
+          <div class="bs-docs-example">
+            <ul>
+              <li>5 anos de garantia no colchão</li>
+              <li>Photonterapia (Infravermelho Longo)</li>
+              <li>Magnétoterapia (Ímãs)</li>
+              <li>&nbsp;</li>
+              <li>&nbsp;</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-  <div class="pcp_top_bx_c" align="left">
-    <p class="pcp_top_bx_tlt"> Benefícios </p>
-    <div class="pcp_top_bx_img">
-      <a href="beneficios">
-        <img src="assets/pcp2.png">
-      </a>
-    </div>
-    <p class="pcp_top_bx_txt"> Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
-    <a href="beneficios" class="pcp_bt_mais"></a>
-  </div>
+      <div class="cb"></div>
 
-  <div class="pcp_top_bx" align="left">
-    <p class="pcp_top_bx_tlt"> Seja um revendedor </p>
-    <div class="pcp_top_bx_img">
-      <a href="seja-um-revendedor">
-        <img src="assets/pcp3.png">
-      </a>
+      <div class="row-fluid">
+        <div class="span6">
+          <iframe width="470" height="320" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Bigg%20Sonno%20Colch%C3%B5es%20Infra%20Vermelho%20e%20Magn%C3%A9tico%20-%20Rua%20C%2C%20Goi%C3%A2nia%20-%20Goi%C3%A1s%2C%20Brasil&amp;key=AIzaSyBHUiV5j8fAfkolMeedPVh6tQALKThCAyg"></iframe>
+        </div>
+        <div class="span6">
+          <h4 id="title_contact">Agende uma visita</h4>
+          <%= form_for(:contact, :authenticity_token => true) do |f| %>
+            <%= f.text_field :name, :class => "span12", :placeholder => "Nome" %>
+            <%= f.text_field :ddd , :class => "span2" , :placeholder => "DDD", :maxlength => "3" %>
+            <%= f.text_field :telefone , :class => "span10", :placeholder => "Telefone", :maxlength => "10" %>
+            <%= f.text_area  :message  , :class => "span12", :placeholder => "Mensagem", :rows => "8" %>
+            <div align="left">
+              <%= f.submit 'Enviar', :id => 'submitContact', :class => 'btn' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
-    <p class="pcp_top_bx_txt"> Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p>
-    <a href="" class="pcp_bt_mais"></a>
   </div>
 
   <div class="cb"></div>
@@ -42,11 +74,9 @@
     <div class="pcp_btt_bx_r" align="left">
       <p class="pcp_btt_bx_r_es"> Recomendação Médica </p>
       <p class="pcp_btt_bx_r_txt">Portadores de marcapasso devem utilizar somente os aparelhos com infravermelho
-                                  Longo. Gestantes não devem fazer uso da massagem vibratória mas podem utilizar
-                                  a "energia quântica". (Dúvidas, consultar o seu Médico). Os aparelhos não
-                                  substituem as terapêuticas tradicionais ou orientação médica.</p>
-      <!-- <a href="medico" class="pcp_bt_cont"></a> -->
-      <!-- <div align="right"><a href="javascript:;" class="btn btn-small">Continuar lendo</a></div> -->
+        Longo. Gestantes não devem fazer uso da massagem vibratória mas podem utilizar
+        a "energia quântica". (Dúvidas, consultar o seu Médico). Os aparelhos não
+        substituem as terapêuticas tradicionais ou orientação médica.</p>
     </div>
     <div class="cb"></div>
   </div>

@@ -22,6 +22,7 @@ group :assets do
 end
 
 group :development do
+  gem 'mailcatcher'
   gem 'pry-debugger'
   gem 'pry-rails'
   gem 'better_errors'
