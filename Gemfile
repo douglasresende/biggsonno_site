@@ -28,6 +28,9 @@ group :development do
   gem 'better_errors'
   # gem 'railroady'
   gem 'binding_of_caller', platforms: [:mri_19, :mri_20, :rbx]
+  gem 'capistrano'
+  gem 'capistrano-rbenv', '~> 2.0'
+  gem 'capistrano-rails', '~> 1.1.0'
 end
 
 group :test do
