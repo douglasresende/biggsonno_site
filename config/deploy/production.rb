@@ -16,7 +16,7 @@ role :db,  "#{fetch(:app_url)}"
 # server list. The second argument is a, or duck-types, Hash and is
 # used to set extended properties on the server.
 
-server "#{fetch(:app_url)}", user: 'ubuntu', roles: %w{web app}
+server "#{fetch(:app_url)}", user: 'ubuntu', roles: %w{web app db}
 set :rails_env, 'production'
 
 # Custom SSH Options
