@@ -13,7 +13,7 @@ module BiggsonnoSite
     # -- all .rb files in that directory are automatically loaded.
     config.autoload_paths += %W( #{config.root}/app/resources/**/* )
     # config.assets.precompile += ['biggsonno/biggsonno.js']
-    config.assets.paths << Rails.root.join('vendor', 'assets', 'components')
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'components', 'app')
     config.assets.precompile += %w(application.css.scss)
     config.assets.precompile += %w(biggsonno.css.scss)
     config.assets.version = '1.0'
