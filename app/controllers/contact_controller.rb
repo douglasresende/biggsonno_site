@@ -15,4 +15,21 @@ class ContactController < ApplicationController
       end
     end
   end
+
+  def ajsi
+    respond_to do |format|
+      begin
+        name = params[:name]
+        fone = params[:telefone]
+        message = params[:message]
+        if AjsiMailer.send_mail(name, fone, message).deliver
+          format.json { render :json => "Reserva registrada.".to_json, :root => false }
+        else
+          format.json { render :json => "Não foi possível registrar a reserva.".to_json, :status => :unprocessable_entity }
+        end
+      rescue ScriptError
+        format.json { render :json => "Não foi possível registrar a reserva.".to_json, :status => :unprocessable_entity }
+      end
+    end
+  end
 end

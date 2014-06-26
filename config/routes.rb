@@ -7,6 +7,7 @@ BiggsonnoSite::Application.routes.draw do
 
   resources :newsletters, :only => :create
   match :contact, to: "contact#create", via: 'post'
+  match :ajsi, to: "contact#ajsi", via: 'get'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
